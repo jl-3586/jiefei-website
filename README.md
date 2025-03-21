@@ -1,6 +1,6 @@
 # Jiefei Li - Portfolio Website
 
-This is a personal portfolio website showcasing my professional background, projects, and blog posts in data science and engineering. The site features a clean, modern design with sections for professional background, projects, and blog posts, a demonstration of my skill using AI for development. 
+This is a personal portfolio website showcasing my professional background, projects, and blog posts in data science and engineering. The site features a clean, modern design with sections for professional background, projects, and blog posts. This is a AI coding camp project using template created by Corey Chiu.
 
 ## Features
 
@@ -21,6 +21,10 @@ This is a personal portfolio website showcasing my professional background, proj
   - [Headless UI](https://headlessui.com/) for unstyled, accessible components
 - **Icons**: [Phosphor Icons](https://phosphoricons.com/) and [Lucide React](https://lucide.dev/)
 - **Deployment**: Configured for easy deployment on Vercel or similar platforms
+
+
+
+
 
 ## Getting Started
 
