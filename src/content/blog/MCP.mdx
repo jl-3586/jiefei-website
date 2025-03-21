@@ -1,0 +1,110 @@
+---
+title: 'What is Model Context Protocol (MCP)?'
+description: 'Understanding how MCP creates a standardized approach to AI integrations'
+date: '2025-03-07'
+
+---
+
+### So what is MCP and why suddenly everyone is talking about it?
+
+tl;dr; MCP acts like standardized USB-C port for AI that simplifies connecting AI models to external tools and data sources, reducing integration complexity and enabling dynamic two-way communication. ✨
+
+## What is MCP?
+
+The Model Context Protocol (MCP) is a standardized protocol that connects AI agents to various external tools and data sources. Imagine it as a USB-C port - but for AI applications.
+
+Just as USB-C simplifies how you connect different devices to your computer, MCP simplifies how AI models interact with your data, tools, and services.
+
+## Why use MCP instead of traditional APIs?
+
+Traditionally, connecting an AI system to external tools involves integrating multiple APIs. Each API integration means separate code, documentation, authentication methods, error handling, and maintenance.
+
+**Why traditional APIs are like having separate keys for every door**
+
+Metaphorically Speaking: APIs are like individual doors - each door has its own key and rules:
+
+Traditional APIs require developers to write custom integrations for each service or data source. This approach becomes increasingly burdensome as the number of integrations grows.
+
+## Who's behind MCP?
+
+MCP (Model Context Protocol) started as a project by [Anthropic](https://www.anthropic.com) to make it easier for AI models - like Claude - to interact with tools and data sources.
+
+But it's not just an Anthropic thing anymore. MCP is open, and more companies and developers are jumping on board.
+
+It's starting to look a lot like a new standard for AI-tool interactions.
+
+<Callout type="tip">
+  Curious to dig deeper? The official MCP spec and ongoing development can be found at [modelcontextprotocol.io](https://modelcontextprotocol.io).
+</Callout>
+
+
+## How MCP works: The architecture
+
+MCP follows a simple client-server architecture:
+
+- **MCP Hosts:** These are applications (like Claude Desktop or AI-driven IDEs) needing access to external data or tools
+- **MCP Clients:** They maintain dedicated, one-to-one connections with MCP servers
+- **MCP Servers:** Lightweight servers exposing specific functionalities via MCP, connecting to local or remote data sources
+- **Local Data Sources:** Files, databases, or services securely accessed by MCP servers
+- **Remote Services:** External internet-based APIs or services accessed by MCP servers
+
+
+Visualizing MCP as a bridge makes it clear: MCP doesn't handle heavy logic itself; it simply coordinates the flow of data and instructions between AI models and tools.
+
+<Callout type="tip">
+  Just as USB-C simplifies how you connect different devices to your computer, MCP simplifies how AI models interact with your data, tools, and services.
+</Callout>
+
+## An MCP client in practice
+
+In practice, an MCP client (e.g., a Python script in client.py) communicates with MCP servers that manage interactions with specific tools like Gmail, Slack, or calendar apps.
+
+This standardization removes complexity, letting developers quickly enable sophisticated interactions.
+
+## MCP examples: When to use MCP?
+
+Consider these scenarios:
+
+### 1. Trip planning assistant
+- **Using APIs:** You'd write separate code for Google Calendar, email, airline booking APIs, each with custom logic for authentication, context-passing, and error handling
+- **Using MCP:** Your AI assistant smoothly checks your calendar for availability, books flights, and emails confirmations - all via MCP servers, no custom integrations per tool required
+
+### 2. Advanced IDE (Intelligent Code Editor)
+- **Using APIs:** You'd manually integrate your IDE with file systems, version control, package managers, and documentation
+- **Using MCP:** Your IDE connects to these via a single MCP protocol, enabling richer context awareness and more powerful suggestions
+
+### 3. Complex data analytics
+- **Using APIs:** You manually manage connections with each database and data visualization tool
+- **Using MCP:** Your AI analytics platform autonomously discovers and interacts with multiple databases, visualizations, and simulations through a unified MCP layer
+
+## Benefits of implementing MCP
+
+- **Simplified development:** Write once, integrate multiple times without rewriting custom code for every integration
+- **Flexibility:** Switch AI models or tools without complex reconfiguration
+- **Real-time responsiveness:** MCP connections remain active, enabling real-time context updates and interactions
+- **Security and compliance:** Built-in access controls and standardized security practices
+- **Scalability:** Easily add new capabilities as your AI ecosystem grows—simply connect another MCP server
+
+## When are traditional APIs better?
+
+If your use case demands precise, predictable interactions with strict limits, traditional APIs could be preferable. MCP provides broad, dynamic capabilities ideal for scenarios requiring flexibility and context-awareness but might be less suited for highly controlled, deterministic applications.
+
+Stick with granular APIs when:
+- Fine-grained control and highly-specific, restricted functionalities are needed
+- You prefer tight coupling for performance optimization
+- You want maximum predictability with minimal context autonomy
+
+## Getting started with MCP: High-level steps
+
+MCP integration:
+
+1. **Define capabilities:** Clearly outline what your MCP server will offer
+2. **Implement MCP layer:** Adhere to the standardized MCP protocol specifications
+3. **Choose transport:** Decide between local (stdio) or remote (Server-Sent Events/WebSockets)
+4. **Create resources/tools:** Develop or connect the specific data sources and services your MCP will expose
+5. **Set up clients:** Establish secure and stable connections between your MCP servers and clients
+
+
+## Conclusion
+
+MCP provides a unified and standardized way to integrate AI agents and models with external data and tools. It's not just another API; it's a powerful connectivity framework enabling intelligent, dynamic, and context-rich AI applications.
