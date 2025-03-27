@@ -41,7 +41,7 @@ export const aboutParagraphs = [
 // blog
 export const blogHeadLine = "What I've thinking about."
 export const blogIntro =
-  "Check out some amazing blogs about data and AI"
+  "Check out some amazing blogs about data and AI that I would like to share"
 
 // social links
 export type SocialLinkType = {
